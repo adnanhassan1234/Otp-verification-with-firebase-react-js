@@ -1,0 +1,15 @@
+.logo {
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+.logo a {
+  display: block;
+}
+
+.logo a img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+/*# sourceMappingURL=index.module.css.map */

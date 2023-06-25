@@ -1,0 +1,21 @@
+.wrapper{
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+// .mainBox{
+//   position: relative;
+//   padding: 0 0 0 300px;
+//   min-height: 100vh;
+// }
+.mainBox{
+  min-height: 100vh;
+  width: calc(100% - 300px);
+  margin-right: auto;
+}
+.mainContainer{
+  position: relative;
+  overflow: hidden;
+  background-color: #F8F7FA;
+}

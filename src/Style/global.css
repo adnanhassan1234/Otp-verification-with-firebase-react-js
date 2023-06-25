@@ -1,0 +1,12 @@
+.plus{
+ width: 38px;
+ height: 38px;
+ border-radius: 50%;
+background: linear-gradient(225deg, #FA4A6F 0%, #EF5395 30.91%, #DE4DCB 75.85%, #CE4CE6 100%), #AAAAAA;
+box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+display: flex;
+justify-content: center;
+align-items: center;
+color: white;
+cursor: pointer;
+}

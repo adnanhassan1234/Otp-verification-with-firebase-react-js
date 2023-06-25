@@ -1,0 +1,144 @@
+// Typography
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6,
+.h {
+  font-family: $gilroy;
+  font-weight: 700;
+  margin: 0 0 0.5em;
+  color: #000;
+}
+
+h1, .h1 {
+  font-size: $h1-font-size;
+}
+
+h2, .h2 {
+  font-size: $h2-font-size;
+}
+
+h3, .h3 {
+  font-size: $h3-font-size;
+}
+
+h4, .h4 {
+  font-size: $h4-font-size;
+}
+
+h5, .h5 {
+  font-size: $h5-font-size;
+}
+
+h6, .h6 {
+  font-size: $h6-font-size;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+a {
+  color: $color-black;
+  text-decoration: none;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+th, td{
+  text-align: center !important;
+}
+
+.data_table {
+  margin: 17px 0 !important;
+  [class*='rdt_TableCol'] {
+    [class*='rdt_TableCol_Sortable'] {
+      p {
+        color: #9DA09F;
+        font-weight: 600;
+        font-size: 14px;
+      }
+
+    }
+
+    [class*='rdt_TableCell'] {
+      flex: 0 0 auto !important;
+    }
+  }
+}
+[role="table"]{
+  div[class*="TableHeadRow"] {
+    background: #fff !important;
+    font-size: 13px !important;
+    margin: 0 20px;
+   
+  }
+
+  div[class*="TableRow"] {
+    background: #fff !important;
+    padding: 20px !important;
+  }
+
+  .dropdown{
+    .dropdown-toggle{
+      width: 25px;
+      height: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ccc;
+
+      &:after{
+        display: none;
+      }
+    }
+
+    .dropdown-menu{
+      border-radius: 15px;
+      overflow: hidden;
+      border: none;
+      box-shadow: 0 0 10px -5px rgba(0,0,0,0.4);
+      padding: 0;
+      font-size: 13px;
+
+      a{
+        display: block;
+        padding: 10px 15px;
+
+        &:hover{
+          background: #D6EBC4;
+        }
+      }
+    }
+  }
+
+  .userBlock{
+    position: relative;
+    padding: 0 0 0 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+  }
+
+  .userImg{
+    position: absolute;
+    top: 6px;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 50%;
+
+    img{
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+}

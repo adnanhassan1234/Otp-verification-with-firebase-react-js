@@ -1,0 +1,23 @@
+.logo {
+  max-width: 100px;
+  margin: 35px 112px 42px auto;
+  Button {
+    width: 124px;
+    height: 56px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px 0px #00000008;
+    background: #31D7EC !important;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #000000;
+
+    &:hover {
+      color: #000000 !important;
+      border: 2px solid #31D7EC !important;
+    }
+  }
+}

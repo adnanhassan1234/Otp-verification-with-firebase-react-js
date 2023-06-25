@@ -1,0 +1,111 @@
+.otp_section {
+    .box {
+        width: 100%;
+        min-height: 90vh;
+        border-radius: 20px;
+        background-color: #078C61;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 350.571px;
+            height: 330px;
+            flex-shrink: 0;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+    .contact_number{
+        .otp_resend{
+            p{
+                font-family: 'Inter', sans-serif;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 27px;
+                letter-spacing: 0em;
+                text-align: right;
+                color: #767D87;
+                
+            }
+            span{
+                color: green,
+            }
+        }
+       margin-top: 30%;
+        h5{
+            font-family: 'Inter', sans-serif;
+            font-size: 19px;
+            font-weight: 600;
+            line-height: 39px;
+            letter-spacing: 0em;
+            text-align: right;
+            color: #767D87;
+          
+
+            
+        }
+        p{
+           
+
+            font-family: 'Inter', sans-serif;
+font-size: 18px;
+font-weight: 400;
+line-height: 27px;
+letter-spacing: 0em;
+text-align: right;
+color: #767D87;
+        }
+        span{
+            color: #078C61,
+
+        }
+        ::placeholder{
+            color: #B5B5B5;
+            font-family: 'Inter', sans-serif;
+            font-size: 18px;
+            font-weight: 200;
+            line-height: 48px;
+            letter-spacing: 0em;
+            background-color: transparent !important;
+        }
+        input{
+            font-size: 18px;
+            // height: 56px !important;
+            letter-spacing: 1px;
+            background-color: transparent !important;
+            border: 1.5px solid #E1E1E1 !important;
+        }
+     
+        .input_number{
+            // max-width: 357px;
+            // float: right;
+            height: 64px !important;
+            background-color: transparent !important;
+            border: 1.5px solid #E1E1E1 !important;
+        }
+     
+
+    }
+
+    .button{
+        Button{
+            height: 50px;
+            background: #FBBC04;
+            font-family: 'Inter', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 35px;
+            letter-spacing: 0px;
+            text-align: center;
+            width: 101%;
+        }
+        :hover{
+            height: 50px;
+            background: #FBBC04 !important;
+           border: none !important;
+        }
+    }
+
+
+}

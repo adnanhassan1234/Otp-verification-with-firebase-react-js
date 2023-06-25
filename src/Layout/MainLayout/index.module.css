@@ -1,0 +1,17 @@
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.mainBox {
+  position: relative;
+  padding: 0 0 0 250px;
+  min-height: 100vh;
+}
+
+.mainContainer {
+  position: relative;
+  overflow: hidden;
+}
+/*# sourceMappingURL=index.module.css.map */

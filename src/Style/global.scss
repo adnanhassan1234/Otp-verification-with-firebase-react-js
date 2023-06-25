@@ -1,0 +1,863 @@
+@import "~bootstrap/scss/bootstrap";
+@import "~react-datepicker/dist/react-datepicker.css";
+
+@import "Style/base";
+
+body {
+  font-size: 14px;
+  line-height: 20px;
+  font-family: $gilroy;
+}
+
+section {
+  padding: 15px;
+  margin: 15px;
+}
+
+// .card {
+//   border-radius: 20px;
+//   box-shadow: 0 0 10px -7px rgba(0, 0, 0, 0.3);
+//   border-color: rgba(0, 0, 0, 0.1);
+//   // padding: 15px;
+//   margin: 0 0 15px;
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   overflow: hidden;
+//   .messagesSearch{
+//     display: flex;
+//     justify-content: space-between;
+//     margin: 0 10px;
+//     i{
+//       font-size: 20px;
+//     }
+//   }
+
+//   .btn-set-end {
+//     position: absolute;
+//     right: 40px;
+//     top: 105px;
+//   }
+
+//   &.bg-bottom-right {
+//     background-position: 100% 100%;
+//     background-size: 168px;
+//   }
+
+//   &.bg-bottom-right_2 {
+//     background-position: 101% 121%;
+//     background-size: 245px;
+//     background-color: #324C51;
+//     border-radius: 30px;
+
+//   }
+
+//   .card-header {
+//     background: none;
+//     border-color: rgba(0, 0, 0, 0.1);
+//     align-items: center;
+//     display: flex;
+//     justify-content: space-between;
+  
+//   }
+
+//   .card-title {
+//     font-size: 24px;
+//     line-height: 30px;
+//   }
+
+//   .search-filter-form-field {
+//     display: flex;
+//     padding: 10px;
+
+//     .filter-input-field {
+//       width: 150px;
+//       margin: 0px 5px;
+    
+      
+//       .form-control {
+//         background-color: #F1F3F6;
+//         color: #000000;
+//         font-weight: 500;
+//         font-size: 14px;
+//       }
+
+//     }
+    
+
+//     .search-input-field {
+//       width: 300px;
+//       margin: 0px 5px;
+
+//       .form-control {
+//         background-color: #F1F3F6;
+//         color: #000000;
+//       }
+//     }
+//   }
+// }
+
+// nav {
+//   .dropdown {
+//     &.show {
+//       .btn {
+//         &:after {
+//           transform: rotate(-225deg);
+//           top: 23px;
+
+//         }
+//       }
+//     }
+
+//     .btn {
+//       padding: 15px 25px 15px 40px;
+//       border-radius: 0;
+//       background: #fff;
+//       color: #000;
+//       display: block;
+//       border: none;
+//       height: auto;
+//       line-height: 20px;
+//       font-weight: 600;
+//       font-size: 16px;
+//       position: relative;
+//       width: 100%;
+//       text-align: left;
+
+//       &:focus {
+//         background: none;
+//       }
+
+//       &:hover {
+//         background: transparent;
+//         color: #8EB26F;
+
+//         &:after {
+//           border-color: #8EB26F;
+//         }
+
+//       }
+
+//       &:after {
+//         position: absolute;
+//         content: "";
+//         width: 8px;
+//         height: 8px;
+//         display: block;
+//         border: none;
+//         border-left: 1px solid #000;
+//         border-bottom: 1px solid #000;
+//         transform: rotate(-45deg);
+//         top: 18px;
+//         right: 9px;
+//         transition: all linear 0.3s;
+//       }
+
+
+//       >i {
+//         position: absolute;
+//         top: 13px;
+//         left: 0;
+//         display: flex !important;
+//         align-items: center;
+//         justify-content: center;
+//         width: 25px;
+//         height: 25px;
+//       }
+
+//     }
+
+//     .dropdown-menu {
+//       position: static !important;
+//       width: 100%;
+//       transform: none !important;
+//       border: none;
+//       margin: 0 !important;
+//     }
+//   }
+// }
+
+// .inner_styling {
+//   i {
+//     font-size: 30px;
+//     color: #8EB26F;
+//     width: 40px;
+//   }
+
+//   p {
+//     color: #7265E3;
+//     font-size: 16px;
+//     margin-top: 3px;
+//     text-align: center;
+//   }
+// }
+
+// .activity_list {
+//   list-style: none;
+//   margin: 0;
+//   padding: 0;
+//   display: flex;
+//   flex-wrap: wrap;
+//   width: 100%;
+
+//   &.col2 {
+//     li {
+//       flex: 0 0 50%;
+//     }
+//   }
+
+//   &.col3 {
+//     li {
+//       flex: 0 0 33.3%;
+//     }
+//   }
+//   li {
+//     flex: 0 0 100%;
+//     display: block;
+//     padding: 15px;
+//   }
+
+//   .box {
+//     display: block;
+//     border-radius: 10px;
+//     padding: 20px 40px;
+//     background: rgba($color: #000000, $alpha: 0.05);
+//     position: relative;
+//     color: #000;
+//     text-decoration: none;
+//     font-size: 16px;
+//     line-height: 22px;
+//     font-weight: 700;
+
+//   }
+
+//   .box_accordian {
+//     .accordion-header {
+//       button {
+//         display: block;
+//         border-radius: 10px;
+//         padding: 20px 40px;
+//         background: rgba(0, 0, 0, 0.05);
+//         position: relative;
+//         color: #000;
+//         text-decoration: none;
+//         font-size: 16px;
+//         line-height: 22px;
+//         font-weight: 700;
+
+//         &:focus {
+//           box-shadow: none !important;
+//         }
+//       }
+//     }
+
+//     .accordion-body {
+//       padding: 0 !important;
+
+//       .list-group {
+//         background-color: #FAFAFA;
+//         display: block;
+//         text-align: center;
+//         cursor: pointer;
+
+//         .list-group-item {
+//           background-color: #FAFAFA;
+//           color: black;
+//           font-weight: 500;
+
+//           &:hover {
+//             background-color: #8EB26F;
+//           }
+//         }
+//       }
+//     }
+//   }
+
+//   .boxes_rounded {
+//     a {
+//       text-decoration: none;
+//     }
+
+//     // .form-check-input[type=checkbox] {
+//     //   border-radius: 10.25em;
+//     //   width: 30px;
+//     //   height: 30px;
+//     // }
+//   }
+
+//   i {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     width: 20px;
+//     height: 20px;
+//     background: rgba($color: #000000, $alpha: 0.3) !important;
+//     position: absolute;
+//     top: 20px;
+//     left: 10px;
+//     border-radius: 6px;
+//     font-size: 10px;
+//   }
+// }
+// .piechart {
+//   border: 1px solid #cacaca;
+//   position: relative;
+//   width: 100%;
+//   height: 600px;
+//   display: block;
+//   margin: 50px;
+//   padding: 50px;
+
+//   .inner-pie {
+//     margin: auto;
+//   }
+// }
+
+// .chart_card {
+//   margin: 20px;
+// }
+
+
+// .bar-chart {
+//   border: 1px solid #cacaca;
+//   width: 800px;
+//   margin: auto;
+// }
+
+// .main-charts {
+//   display: flex;
+//   justify-content: space-between;
+
+//   .dropdown {
+//     padding-top: 14px;
+
+//     .btn {
+//       width: 200px;
+//       padding-right: 80px;
+
+//       &::after {
+//         position: absolute;
+//         content: "";
+//         width: 8px;
+//         height: 8px;
+//         display: block;
+//         border: none;
+//         border-left: 1px solid white;
+//         border-bottom: 1px solid white;
+//         transform: rotate(-45deg);
+//         top: 26px;
+//         right: 9px;
+//         transition: all linear 0.3s;
+//       }
+//     }
+//   }
+// }
+// .date-setter{
+//   position: absolute;
+//   right: 20px;
+//   top: 12px;
+//   .react-datepicker-wrapper{
+
+
+//     input{
+    
+//       background: url(../Images/calendericon.svg) no-repeat;
+//       background-position: 173px center;
+//       background-size: 20px;
+//      border: 1px solid #cacaca;
+//       border-color: rgba(48, 150, 103, 0.1);
+//       &:focus{
+//         background-color: rgba(48, 150, 103, 0.15);
+//       }
+//     }
+  
+//   }
+// }
+
+// .react-datepicker-wrapper{
+
+
+//   input{
+//     padding-left: 45px;
+//     background: url(../Images/IconCalender.svg) no-repeat;
+//     background-position: 10px center;
+//     background-size: 25px;
+//     background-color: rgba(48, 150, 103, 0.1);
+//     border-color: rgba(48, 150, 103, 0.1);
+
+//     &:focus{
+//       background-color: rgba(48, 150, 103, 0.15);
+//     }
+//   }
+
+// }
+
+
+// .react-datepicker{
+//   background: #fff;
+//   border-radius: 15px;
+//   border-color: rgba(0,0,0,0.05);
+//   overflow: hidden;
+//   padding: 10px;
+
+
+
+
+//   .react-datepicker__triangle{
+//     display: none;
+//   }
+
+//   .react-datepicker__header{
+//     background: #fff;
+//     border: none;
+//   }
+
+//   .react-datepicker__day-name,
+//   .react-datepicker__day,
+//   .react-datepicker__time-name{
+//     width: 36px;
+//     height: 36px;
+//     text-align: center;
+//     line-height: 36px;
+//     border-radius: 50%;
+//   }
+
+//   .react-datepicker__day-name{
+//     color: #8EB26F;
+//     text-transform: uppercase;
+//   }
+
+//   .react-datepicker__day--keyboard-selected,
+//   .react-datepicker__day--selected{
+//     background: #8EB26F;
+//   }
+
+//   .react-datepicker__current-month{
+//     padding: 10px 80px 10px 10px;
+//     text-align: left;
+//     font-size: 20px;
+//     font-weight: 400;
+//   }
+
+//   .react-datepicker__navigation{
+//     top: 13px;
+//     background: rgba(19, 15, 38, 0.0);
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     border-radius: 5px;
+//     margin: 10px;
+//     position: absolute;
+
+//     span{
+//       &:before{
+//         width: 12px;
+//         height: 12px;
+//         border-width: 1px 1px 0 0;
+//         border-color: #000;
+//       }
+//     }
+
+//     &.react-datepicker__navigation--previous{
+//       left: auto;
+//       right: 40px !important;
+
+//     }
+
+//     &.react-datepicker__navigation-icon--next {
+//       left: auto;
+//       right: 10px !important;
+//     }
+//   }
+// }
+
+
+
+
+
+// // ================================================peaceMakerAdminPanel===================================//
+
+// .header-top {
+//   display: flex;
+//   justify-content: space-between;
+//   form {
+//     .input-group {
+//       .form-control {
+//         border: none !important;
+//       }
+//     }
+//   }
+
+//   .bell-icon {
+//     border: transparent;
+//     background: white;
+//     width: 40px;
+//     height: 40px;
+//     border-radius: 7px;
+//     text-align: center;
+//     padding-top: 9px;
+//     font-size: 22px;
+//     margin: 0 15px;
+//     position: relative;
+//     cursor: pointer;
+
+//     &:after {
+//       position: absolute;
+//       content: "2";
+//       border-radius: 15px;
+//       width: 18px;
+//       height: 18px;
+//       background: red;
+//       color: white;
+//       font-weight: 600;
+//       margin: -7px;
+//       font-size: 10px;
+//       top: 4px;
+//       right: 4px;
+
+//     }
+
+//   }
+// }
+
+// [class*='rdt_Pagination'] {
+//   background-color: rgba(142, 178, 111, 1) !important;
+//   border-radius: 0 0 10px 10px;
+
+//   .sc-bYMpWt {
+//     color: white;
+
+//   }
+
+//   .sc-lllmON {
+//     color: white;
+//     padding-bottom: 10px;
+//   }
+
+//   .gMliOo {
+//     svg {
+//       display: none !important;
+//     }
+//   }
+//   .sc-ezOQGI {
+
+//     .fyrdjl {
+//       fill: #fff !important;
+//     }
+
+//     #pagination-first-page {
+//       display: none;
+//     }
+
+//     #pagination-last-page {
+//       display: none;
+//     }
+
+//   }
+// }
+
+// .modal-content {
+//   border-radius: 20px;
+//   padding: 10px;
+//   margin: 10px;
+//   .proflie-upload {
+//     label {
+//       width: 290px;
+//       height: 175px;
+//       position: relative;
+//       background: #f8f8f8;
+//       border: 1px dashed #cdcdcd;
+//       border-radius: 20px;
+//       cursor: pointer;
+//       margin:  auto;
+//       i{
+//           color: rgba(235, 235, 235, 1);
+//           font-size: 30px;
+//           margin-bottom: 15px;
+//       }
+//     }
+//     .text{
+//       background: #fff;
+//       padding: 10px 30px;
+//       border-radius: 10px;
+//     }
+//     #upload-photo {
+//       opacity: 0;
+//       position: absolute;
+//       z-index: -1;
+//     }
+//     }
+
+//   .btn-bottom {
+//     text-align: center;
+//   }
+// }
+
+// .popup-heading {
+//   display: flex;
+//   justify-content: space-between;
+//   margin-bottom: 10px;
+
+//   button {
+//     background: #F7F9FA;
+
+//     i {
+//       font-size: 16px;
+//       font-weight: 600;
+//     }
+//   }
+// }
+// .popup-heading-second {
+//   button {
+//     background: #F7F9FA;
+//     margin-left: 370px;
+//     margin-bottom: 15px;
+//     h2{
+//       text-align: center;
+//       margin-bottom: 15px;
+//     }
+
+//     i {
+//       font-size: 16px;
+//       font-weight: 600;
+//     }
+//   }
+
+// }
+
+
+// .days-of-week {
+//   display: flex;
+//   margin: 10px 0;
+
+//   .form-check-label {
+//     padding-top: 3px !important;
+//   }
+
+//   h5 {
+//     padding: 3px 20px 11px 0;
+//   }
+// }
+
+// .time_set {
+//   display: flex;
+//   margin: 10px 0;
+
+//   h5 {
+//     padding: 11px 20px 11px 0;
+//   }
+
+//   .form-box-shadow {
+//     width: 200px;
+//     margin: 0;
+//   }
+// }
+
+// .btn-bg-none {
+//   border: 1px solid rgb(142, 178, 111);
+//   color: rgb(142, 178, 111);
+//   background: transparent;
+//   border-radius: 10px;
+//   width: 170px;
+//   &:hover{
+//     border: 1px solid rgb(142, 178, 111);
+//     color: rgb(142, 178, 111);
+//   }
+// }
+// .proflie-upload {
+// label {
+//   width: 280px;
+//   height: 200px;
+//   position: relative;
+//   background: #f8f8f8;
+//   border: 1px dashed #cdcdcd;
+//   border-radius: 20px;
+//   cursor: pointer;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   i{
+//       color: rgba(235, 235, 235, 1);
+//       font-size: 30px;
+//       margin-bottom: 15px;
+//   }
+// }
+// .text{
+//   background: #fff;
+//   padding: 10px 30px;
+//   border-radius: 10px;
+// }
+// #upload-photo {
+//   opacity: 0;
+//   position: absolute;
+//   z-index: -1;
+// }
+// }
+// .view-edit-dropdown{
+//   .dropdown-item:active{
+//     background-color: rgba(214, 235, 196, 1);
+//     border-radius: 10px 10px 0 0;
+//   }
+//   .dropdown-item:hover{
+//     background-color: rgba(214, 235, 196, 1);
+//     border-radius: 10px 10px 0 0;
+//   }
+// }
+// .privacy-policy-dropdown{
+//   width: 200px;
+// }
+// .paragraph{
+//   color: rgb(151, 151, 151);
+//   font-size: 16px;
+//   line-height: 30px;
+//   font-weight: 300;
+//   border: 1px solid #cacaca;
+//   border-radius: 15px;
+//   padding: 20px;
+//   margin: 10px 0;
+// }
+// .description{
+//   margin: 50px 0px;
+//   border-left: 1px solid #cacaca;
+//   height: 370px;
+//   padding: 20px;
+//   line-height: 2;
+//  span{
+//   color: rgba(2, 31, 61, 1);
+//  }
+//  time{
+//   color: rgba(151, 151, 151, 1);
+//  }
+//  p{
+//   color: rgba(151, 151, 151, 1);
+//  }
+//   .description-border-bottom{
+//     border-bottom: 1px solid #cacaca;
+//   }
+// }
+// .tableHeader{
+//   position: relative;
+//   padding: 5px 0 5px 130px;
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+//   margin: 10px 0;
+
+//   .dropdown{
+//     position: absolute;
+//     top: 5px;
+//     left: 0;
+//     width: 110px;
+//     padding: 0;
+//   }
+// }
+// .chartBox{
+//   position: relative;
+//   overflow: hidden;
+//   margin: 0 -20px 20px;
+//   border: 1px solid rgba(0,0,0,0.05);
+//   padding: 20px;
+// }
+
+// .chartHeader{
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+// }
+// .setting-icon{
+//   width: 30px;
+//   height: 30px;
+//   background-color: #000;
+//   color: white;
+//   border-radius: 20px;
+//   text-align: center;
+//   padding-top: 7px;
+//   padding-left: 2px;
+//   margin-left: 20px;
+
+// }
+// .search-profile{
+//   display: flex;
+//   margin: 20px 30px 0;
+
+//   a{
+//     font-size: 24px;
+//     margin-left: 140px;
+//     &:hover{
+//       color: #8EB26F;
+//     }
+//   }
+  
+// }
+
+
+.input-group-text {
+  display: flex;
+  align-items: center;
+   padding: 0px !important; 
+  font-size: 15px !important;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: center;
+  /* white-space: nowrap; */
+  background-color: white !important;
+   border: none; 
+  border-radius: 0.375rem;
+}
+.css-1dimb5e-singleValue {
+  grid-area: 1/1/2/3;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #B5B5B5 !important;
+  font-family: 'Inter', sans-serif !important;
+  margin-left: 2px;
+  margin-right: 2px;
+  box-sizing: border-box;
+}
+.hMTxQo {
+  font-size: 26px !important;
+
+}
+.otp_section .contact_number input {
+  width: 89% !important;
+  margin-left: 42px !important;
+  font-size: 18px;
+  letter-spacing: 1px;
+  background-color: transparent !important;
+  border: 1.5px solid #E1E1E1 !important;
+  border-radius: 0px !important;
+
+}
+.react-tel-input .selected-flag {
+  outline: none;
+  position: relative;
+  width: 41px;
+  background-color: white !important;
+  height: 100%;
+  /* height: 33px; */
+  padding: 0 0 0 4px;
+  border-radius: 3px 0 0 3px;
+}
+
+
+
+.animate-spin {
+  animation-name: rotate !important;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes rotate{
+  from{ transform: rotate(-360deg) !important; }
+  to{ transform: rotate(360deg) !important; }
+}
+
+
+.hLNLVq {
+
+  width: calc( var(--ReactInputVerificationCode-itemWidth) * 6 + var(--ReactInputVerificationCode-itemSpacing) * (5 - 1) ) !important;
+
+}

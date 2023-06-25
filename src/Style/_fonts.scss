@@ -1,0 +1,210 @@
+/* FONTS */
+$font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+  "Droid Sans", "Helvetica Neue", sans-serif;
+
+$font-base-size-large-screens: 20px;
+$font-base-size-medium-screens: 18px;
+$font-base-size-small-screens: 16px;
+
+/* FONT WEIGHTS */
+$font-weight-big: 900;
+$font-weight-bold: 500;
+$font-weight-heavy: 700;
+$font-weight-light: 100;
+$font-weight-regular: 400;
+
+
+
+@font-face {
+  font-family: 'gilroy';
+  src: url('../Fonts/gilroy-bold-webfont.woff2') format('woff2'), url('../Fonts/gilroy-bold-webfont.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'gilroy';
+  src: url('../Fonts/gilroy-semibold-webfont.woff2') format('woff2'), url('../Fonts/gilroy-semibold-webfont.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'gilroy';
+  src: url('../Fonts/gilroy-medium-webfont.woff2') format('woff2'), url('../Fonts/gilroy-medium-webfont.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'gilroy';
+  src: url('../Fonts/gilroy-regular-webfont.woff2') format('woff2'), url('../Fonts/gilroy-regular-webfont.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../Fonts/icomoon.eot?t0x92t');
+  src:  url('../Fonts/icomoon.eot?t0x92t#iefix') format('embedded-opentype'),
+    url('../Fonts/icomoon.ttf?t0x92t') format('truetype'),
+    url('../Fonts/icomoon.woff?t0x92t') format('woff'),
+    url('../Fonts/icomoon.svg?t0x92t#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-User:before {
+  content: "\e908";
+}
+.icon-Heart-Pressure:before {
+  content: "\e909";
+}
+.icon-alert:before {
+  content: "\e90a";
+}
+.icon-Attachement:before {
+  content: "\e90b";
+}
+.icon-black-smile:before {
+  content: "\e90c";
+}
+.icon-Calender:before {
+  content: "\e90d";
+}
+.icon-Chart:before {
+  content: "\e90e";
+}
+.icon-Chat:before {
+  content: "\e90f";
+}
+.icon-Clock:before {
+  content: "\e910";
+}
+.icon-delete:before {
+  content: "\e911";
+}
+.icon-download:before {
+  content: "\e912";
+}
+.icon-edit:before {
+  content: "\e913";
+}
+.icon-envelop:before {
+  content: "\e914";
+}
+.icon-Filter:before {
+  content: "\e915";
+}
+.icon-gallery:before {
+  content: "\e916";
+}
+.icon-Heart:before {
+  content: "\e917";
+}
+.icon-Home:before {
+  content: "\e918";
+}
+.icon-ignore-messages:before {
+  content: "\e919";
+}
+.icon-Login:before {
+  content: "\e91a";
+}
+.icon-Medium:before {
+  content: "\e91b";
+}
+.icon-message:before {
+  content: "\e91c";
+}
+.icon-messenger .path1:before {
+  content: "\e91d";
+  color: rgb(0, 0, 0);
+}
+.icon-messenger .path2:before {
+  content: "\e91e";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-Mute-notification:before {
+  content: "\e91f";
+}
+.icon-play:before {
+  content: "\e920";
+}
+.icon-Send:before {
+  content: "\e921";
+}
+.icon-Setting:before {
+  content: "\e922";
+}
+.icon-Star:before {
+  content: "\e923";
+}
+.icon-target-black:before {
+  content: "\e924";
+}
+.icon-Thermometer:before {
+  content: "\e925";
+}
+.icon-time:before {
+  content: "\e926";
+}
+.icon-title:before {
+  content: "\e927";
+}
+.icon-Unfil-challenge:before {
+  content: "\e928";
+}
+.icon-unfill-envelop:before {
+  content: "\e929";
+}
+.icon-unfill-serach:before {
+  content: "\e92a";
+}
+.icon-user:before {
+  content: "\e92b";
+}
+.icon-Vector:before {
+  content: "\e92c";
+}
+.icon-Union:before {
+  content: "\e900";
+}
+.icon-Search:before {
+  content: "\e901";
+}
+.icon-dashboard:before {
+  content: "\e902";
+}
+.icon-guidline:before {
+  content: "\e903";
+}
+.icon-phone:before {
+  content: "\e904";
+}
+.icon-reminders:before {
+  content: "\e905";
+}
+.icon-sponsorship:before {
+  content: "\e906";
+}
+.icon-user1:before {
+  content: "\e907";
+}
