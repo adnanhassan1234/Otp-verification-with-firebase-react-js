@@ -38,7 +38,6 @@ const Home = () => {
       console.error(error);
     }
   }
-  
 
   useEffect(() => {
     fetchData();
@@ -78,7 +77,6 @@ const Home = () => {
     setSelectedEditData(user);
     setOpenEditModal(true);
   };
-
 
   const columns = [
     {
@@ -135,78 +133,86 @@ const Home = () => {
       selector: (row) => row.name,
       // selector: (row) => row.action,
       cell: (row) => (
-        <div className="icon_menu">
-          {row.name}
+        <div className="icon_menus">
+          {row.name} <br />
           {row.email}
         </div>
       ),
     },
   ];
 
+
+  
   const filteredData = userData.filter(
-    (row) =>
-      row.name.toLowerCase().includes(searchValue.toLowerCase()) ||
-      row.email.toLowerCase().includes(searchValue.toLowerCase())
+    (row) => {
+      const fullName = row.name.toLowerCase().replace(/\s+/g, "");
+      const search = searchValue.toLowerCase().replace(/\s+/g, "");
+      return (
+        fullName.includes(search) ||
+        fullName.startsWith(search) ||
+        row.email.toLowerCase().includes(search)
+      );
+    }
   );
+  
 
   return (
     <>
       <Header title={"Home"} />
-      {isLoader?
+      {isLoader ? (
         <section>
-        <Card className="card p-0" style={{ border: "none" }}>
-          <Card.Header>
-            <div className="tableHeader d-flex justify-content-between mt-3">
-              <Button
-                onClick={() => {
-                  setOpen(true);
-                }}
-              >
-                Add User <span>+</span>
-              </Button>
-              <h4>
-                Users <img src={user} width={38} alt="" />
-              </h4>
-            </div>
-            <input
-  type="search"
-  className="form-control my-3"
-  placeholder="Search by user Name and Email..."
-  value={searchValue}
-  onChange={(e) => setSearchValue(e.target.value)}
-/>
+          <Card className="card p-0" style={{ border: "none" }}>
+            <Card.Header>
+              <div className="tableHeader d-flex justify-content-between mt-3">
+                <Button
+                  onClick={() => {
+                    setOpen(true);
+                  }}
+                >
+                  Add User <span>+</span>
+                </Button>
+                <h4>
+                  Users <img src={user} width={38} alt="" />
+                </h4>
+              </div>
+              <input
+                type="search"
+                className="form-control my-3"
+                placeholder="Search by user Name and Email..."
+                value={searchValue}
+                onChange={(e) => setSearchValue(e.target.value)}
+              />
+            </Card.Header>
 
-          </Card.Header>
+            <DataTable
+              columns={columns}
+              data={filteredData}
+              selectableRows
+              pagination
+            />
+          </Card>
 
-          <DataTable
-            columns={columns}
-            data={filteredData}
-            selectableRows
-            pagination
+          {/* add user popup */}
+          <AddUpdateNewUser
+            fetchData={fetchData}
+            open={open}
+            handleClosePopup={handleClosePopup}
+            onHide={() => setOpen(false)}
           />
-        </Card>
 
-        {/* add user popup */}
-        <AddUpdateNewUser
-          fetchData={fetchData}
-          open={open}
-          handleClosePopup={handleClosePopup}
-          onHide={() => setOpen(false)}
-        />
-
-{/* Edit user same popup */}
-        <AddUpdateNewUser
-          handleClosePopup={() => setOpenEditModal(false)}
-          open={openEditModal}
-          fetchData={fetchData}
-          selectedEditData={selectedEditData}
-        />
-      </section> :
-      <Box>
-        <Typography variant="h5">Loading...</Typography>
-      </Box>
-      }
-     
+          {/* Edit user same popup */}
+          <AddUpdateNewUser
+            handleClosePopup={() => setOpenEditModal(false)}
+            open={openEditModal}
+            fetchData={fetchData}
+            selectedEditData={selectedEditData}
+          />
+        </section>
+      ) : (
+        <Box>
+          <Typography variant="h5">Loading...</Typography>
+        </Box>
+      )}
     </>
   );
 };
