@@ -1,15 +1,22 @@
 .logo {
-  max-width: 200px;
-  margin: 0 auto;
+  max-width: 100px;
+  margin: 35px 112px 42px auto;
 }
-
-.logo a {
-  display: block;
+.logo Button {
+  width: 124px;
+  height: 56px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.031372549);
+  background: #31D7EC !important;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #000000;
 }
-
-.logo a img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-/*# sourceMappingURL=index.module.css.map */
+.logo Button:hover {
+  color: #000000 !important;
+  border: 2px solid #31D7EC !important;
+}/*# sourceMappingURL=index.module.css.map */

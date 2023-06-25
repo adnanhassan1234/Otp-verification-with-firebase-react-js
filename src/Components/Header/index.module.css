@@ -1,9 +1,48 @@
 .pageTitle {
-  padding: 15px 20px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 23px auto;
+  padding: 0px 30px 0px;
 }
 
-.pageTitle h2 {
-  margin: 0;
+#header {
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 26px 18px;
+  background: #FFFFFF;
+  box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.031372549);
+  border-radius: 15px;
 }
-/*# sourceMappingURL=index.module.css.map */
+
+.avator {
+  width: 49px !important;
+  height: 48px;
+  border-radius: 50% !important;
+  background-color: #AAAAAA !important;
+}
+
+.notification {
+  width: 31px;
+  height: 32px;
+  margin: 10px 36px 0px 0px;
+  cursor: pointer;
+}
+
+.message {
+  width: 30px;
+  height: 30px;
+  margin: 10px 36px 0px 0px;
+  cursor: pointer;
+}
+
+.headerRight h5 {
+  color: #767D87;
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: right;
+  transform: translate(-4px, 9px);
+}/*# sourceMappingURL=index.module.css.map */

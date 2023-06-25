@@ -5,13 +5,13 @@
 }
 
 .mainBox {
-  position: relative;
-  padding: 0 0 0 250px;
   min-height: 100vh;
+  width: calc(100% - 300px);
+  margin-right: auto;
 }
 
 .mainContainer {
   position: relative;
   overflow: hidden;
-}
-/*# sourceMappingURL=index.module.css.map */
+  background-color: #F8F7FA;
+}/*# sourceMappingURL=index.module.css.map */

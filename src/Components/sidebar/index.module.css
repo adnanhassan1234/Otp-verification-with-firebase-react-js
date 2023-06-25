@@ -1,12 +1,11 @@
 .sidebar {
-  width: 250px;
+  width: 300px;
   position: fixed;
   top: 0;
-  left: 0;
-  padding: 15px 0 0;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  right: 0;
   height: 100vh;
-  overflow-y: scroll;
-}
-
-/*# sourceMappingURL=index.module.css.map */
+  overflow: auto;
+  margin-bottom: 30px;
+  box-shadow: -5px 0px 6px 0px rgba(0, 0, 0, 0.031372549);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}/*# sourceMappingURL=index.module.css.map */

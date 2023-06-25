@@ -1,0 +1,130 @@
+$primary-color: #078C61;
+$secondary-color: #FBBC04;
+$placeholder-color: #B5B5B5;
+$text-color: #767D87;
+
+.SignIn_section,
+.otp_section {
+  .box {
+    width: 100%;
+    min-height: 90vh;
+    border-radius: 20px;
+    background-color: $primary-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 350.571px;
+      height: 330px;
+      flex-shrink: 0;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  .contact_number {
+    margin-top: 40%;
+
+    h5 {
+      font-family: 'Inter', sans-serif;
+      font-size: 19px;
+      font-weight: 600;
+      line-height: 39px;
+      letter-spacing: 0em;
+      text-align: right;
+      color: $text-color;
+    }
+
+    ::placeholder {
+      color: $placeholder-color;
+      font-family: 'Inter', sans-serif;
+      font-size: 18px;
+      font-weight: 200;
+      line-height: 48px;
+      letter-spacing: 0em;
+      background-color: transparent !important;
+    }
+
+    input {
+      font-size: 18px;
+      height: 64px !important;
+      letter-spacing: 1px;
+      padding: 12px;
+      background-color: transparent !important;
+      border: 1.5px solid #E1E1E1 !important;
+    }
+
+    .input_number {
+      height: 64px !important;
+      background-color: transparent !important;
+      border: 1.5px solid #E1E1E1 !important;
+    }
+  }
+
+  .button {
+    Button {
+      height: 50px;
+      background: $secondary-color;
+      font-family: 'Inter', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 35px;
+      letter-spacing: 0px;
+      text-align: center;
+      width: 100%;
+    }
+
+    :hover {
+      height: 50px;
+      background: $secondary-color !important;
+      border: none !important;
+    }
+  }
+}
+
+// Specific styles for OTP section
+.otp_section {
+  .contact_number {
+    .otp_resend {
+      p {
+        font-family: 'Inter', sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 27px;
+        letter-spacing: 0em;
+        text-align: right;
+        color: $text-color;
+      }
+
+      span {
+        color: green;
+      }
+    }
+  }
+
+  margin-top: 30%;
+  h5 {
+    margin-top: 40%;
+  }
+
+  p {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: right;
+    color: $text-color;
+  }
+
+  span {
+    color: $primary-color;
+  }
+
+  .input_number {
+    height: 64px !important;
+    background-color: transparent !important;
+    border: 1.5px solid #E1E1E1 !important;
+  }
+}

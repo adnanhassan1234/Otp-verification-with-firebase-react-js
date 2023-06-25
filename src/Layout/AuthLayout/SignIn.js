@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Form, Button } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
-import "./splash.scss";
-import "./otp.scss";
+import "./signIn.scss";
+// import "./otp.scss";
 import login from "../../Images/navbar/login.png";
 import { CgSpinner } from "react-icons/cg";
 import ReactInputVerificationCode from "react-input-verification-code";
@@ -160,13 +160,13 @@ const SignIn = ({ children }) => {
               </div>
             ) : (
               <div className="col-lg-5 col-12">
-                <div className="contact_number">
+                <div className="contact_number" style={{marginTop:'-50px'}}>
                   <h5>We just texted you!</h5>
                   <p>
                     Please enter the code we just sent you at <br />
                     <span>{ph}</span>
                   </p>
-                  <div className="common mt-4 ms-3">
+                  <div className="common mt-5 ms-1">
                     <ReactInputVerificationCode
                       value={otp}
                       onChange={setOtp}
@@ -185,7 +185,7 @@ const SignIn = ({ children }) => {
                     <p>
                       Did not receive OTP? &nbsp;
                       {timer === 0 ? (
-                        <span onClick={onSignup}>Resend</span>
+                        <span onClick={onSignup} style={{cursor:'pointer'}}>Resend</span>
                       ) : (
                         <span>Resend in {timer}s</span>
                       )}

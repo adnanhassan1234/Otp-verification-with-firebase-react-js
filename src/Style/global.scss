@@ -821,7 +821,7 @@ section {
 
 }
 .otp_section .contact_number input {
-  width: 89% !important;
+  width: 92% !important;
   margin-left: 42px !important;
   font-size: 18px;
   letter-spacing: 1px;
@@ -860,4 +860,43 @@ section {
 
   width: calc( var(--ReactInputVerificationCode-itemWidth) * 6 + var(--ReactInputVerificationCode-itemSpacing) * (5 - 1) ) !important;
 
+}
+
+.form-check-input:checked, input[type=checkbox]:checked {
+  background-color: #8eb26f!important;
+}
+.MHRqX {
+
+  display: none !important;
+}
+.hPQIua {
+  display: none !important;
+}
+.beUiVL {
+ font-weight: bold !important;
+ text-transform: uppercase;
+}
+.gKbhqU {
+
+  flex-direction: row-reverse !important;
+}
+.gMliOo {
+  margin-top: -14px !important;
+}
+.WQNxq {
+
+  border-radius: 15px !important;
+
+}
+.hbotQl {
+  font-size: 14px !important;
+  color: #767D87 !important;
+  font-weight: 600 !important;
+  line-height: 19px;
+  letter-spacing: 0px;
+}
+.bQdYbR {
+
+  font-size: 14px !important;
+ 
 }

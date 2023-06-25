@@ -1,0 +1,82 @@
+nav {
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid #E1E1E1;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  position: relative;
+  margin-top: 16px;
+}
+nav ul li a {
+  display: block;
+  color: #000;
+  padding: 15px 15px 9px 45px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  position: relative;
+  font-family: "Inter", sans-serif;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0px;
+  color: #767D87;
+}
+nav ul li a:hover {
+  background: #078C61;
+  color: white;
+  border-radius: 8px;
+  transition: 0.7s;
+}
+nav ul li a:hover i {
+  color: yellow !important;
+  transition: 0.5s;
+}
+nav ul li a i {
+  position: absolute;
+  top: 13px;
+  left: 10px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  color: #078C61;
+}
+
+.logout {
+  max-width: 100px;
+  margin: 35px 112px 42px auto;
+}
+.logout button {
+  width: 124px;
+  height: 56px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.031372549);
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #000;
+  background: #EA5455 !important;
+}
+.logout button:hover {
+  color: #000 !important;
+  border: 2px solid #EA5455 !important;
+}
+
+.active {
+  background: #078C61 !important;
+  color: white;
+  border-radius: 8px;
+}
+.active .icon {
+  color: yellow;
+}/*# sourceMappingURL=nav.css.map */

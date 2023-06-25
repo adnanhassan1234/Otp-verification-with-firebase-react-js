@@ -1,8 +1,33 @@
 .messageListSidebar {
   width: 300px;
   float: right;
-  border-right: 1px solid rgba(0, 0, 0, 0.05);
+  border-left: 1px solid rgba(0, 0, 0, 0.05);
   background: #fff;
+}
+.messageListSidebar input {
+  max-width: 285px;
+  margin: auto;
+}
+.messageListSidebar h5 {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 26px;
+  line-height: 28px;
+  /* or 93% */
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.75px;
+  color: #1A1A1A;
+}
+.messageListSidebar .messagesSearch {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 10px;
+}
+.messageListSidebar .messagesSearch i {
+  font-size: 20px;
+  cursor: pointer;
 }
 .messageListSidebar ul {
   list-style: none;
@@ -14,19 +39,44 @@
   overflow-y: auto;
   scrollbar-color: #6e31a2 transparent;
   scrollbar-width: 4px;
-  margin-top: 50px;
+  margin-top: 18px;
+  font-family: "Rubik";
+  font-style: normal;
 }
 .messageListSidebar ul li {
   position: relative;
   display: flex;
   align-items: center;
-  padding: 15px 15px 15px 70px;
+  padding: 14px 15px 9px 58px;
   min-height: 55px;
   cursor: pointer;
   border-top: 1px solid rgba(0, 0, 0, 0.05);
+  font-family: "Rubik";
+  font-style: normal;
+  justify-content: space-between;
 }
 .messageListSidebar ul li.active, .messageListSidebar ul li:hover {
-  background: rgba(110, 49, 162, 0.1);
+  background: #EFF1F4;
+  border-radius: 4px;
+  border: 1px solid #EFF1F4;
+  font-family: "Rubik";
+  font-style: normal;
+}
+.messageListSidebar ul li .description_online span {
+  color: #9DA09F;
+  font-size: 10px;
+}
+.messageListSidebar ul li .notification {
+  background: #7ea858;
+  border-radius: 20px;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  color: white;
+  padding-top: 3px;
+  margin: 3px 0px 1px 40px;
+  font-family: "Rubik";
+  font-style: normal;
 }
 .messageListSidebar ul .userImg {
   width: 35px;
@@ -44,8 +94,17 @@
 .messageListSidebar ul .description {
   overflow: hidden;
   font-size: 12px;
-  padding: 0 40px 0 0;
   position: relative;
+}
+.messageListSidebar ul .description h6 {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  /* identical to box height, or 175% */
+  letter-spacing: 1px;
+  color: #222222;
 }
 .messageListSidebar ul .description .text {
   overflow: hidden;
@@ -67,6 +126,8 @@
   top: 50%;
   transform: translateY(-50%);
   right: 0;
+  font-family: "Rubik";
+  font-style: normal;
 }
 .messageListSidebar ul .description time {
   float: right;
@@ -92,5 +153,25 @@
 .messageListSidebar .search-form .form-control {
   border-color: transparent;
 }
+.messageListSidebar .btn_more {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: linear-gradient(225deg, #FA4A6F 0%, #EF5395 30.91%, #DE4DCB 75.85%, #CE4CE6 100%), #DB50E0;
+  box-shadow: 0px 20px 15px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  border: none;
+  margin-left: 230px;
+  margin-top: 50px;
+  font-family: "Rubik";
+  font-style: normal;
+}
+.messageListSidebar .btn_more i {
+  margin: 10px 12px;
+}
 
-/*# sourceMappingURL=index.module.css.map */
+input {
+  background-color: #EFF1F4 !important;
+  font-family: "Rubik";
+  font-style: normal;
+}/*# sourceMappingURL=index.module.css.map */

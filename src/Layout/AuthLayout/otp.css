@@ -1,0 +1,97 @@
+.otp_section .box {
+  width: 100%;
+  min-height: 90vh;
+  border-radius: 20px;
+  background-color: #078C61;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.otp_section .box img {
+  width: 350.571px;
+  height: 330px;
+  flex-shrink: 0;
+  display: block;
+  margin: 0 auto;
+}
+.otp_section .contact_number {
+  margin-top: 30%;
+}
+.otp_section .contact_number .otp_resend p {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: 0em;
+  text-align: right;
+  color: #767D87;
+}
+.otp_section .contact_number .otp_resend span {
+  color: green;
+}
+.otp_section .contact_number h5 {
+  font-family: "Inter", sans-serif;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 39px;
+  letter-spacing: 0em;
+  text-align: right;
+  color: #767D87;
+}
+.otp_section .contact_number p {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: 0em;
+  text-align: right;
+  color: #767D87;
+}
+.otp_section .contact_number span {
+  color: #078C61;
+}
+.otp_section .contact_number ::-moz-placeholder {
+  color: #B5B5B5;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 48px;
+  letter-spacing: 0em;
+  background-color: transparent !important;
+}
+.otp_section .contact_number ::placeholder {
+  color: #B5B5B5;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 48px;
+  letter-spacing: 0em;
+  background-color: transparent !important;
+}
+.otp_section .contact_number input {
+  font-size: 18px;
+  letter-spacing: 1px;
+  background-color: transparent !important;
+  border: 1.5px solid #E1E1E1 !important;
+}
+.otp_section .contact_number .input_number {
+  height: 64px !important;
+  background-color: transparent !important;
+  border: 1.5px solid #E1E1E1 !important;
+}
+.otp_section .button Button {
+  height: 50px;
+  background: #FBBC04;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 35px;
+  letter-spacing: 0px;
+  text-align: center;
+  width: 101%;
+}
+.otp_section .button :hover {
+  height: 50px;
+  background: #FBBC04 !important;
+  border: none !important;
+}/*# sourceMappingURL=otp.css.map */

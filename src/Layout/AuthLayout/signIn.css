@@ -1,0 +1,120 @@
+.SignIn_section .box,
+.otp_section .box {
+  width: 100%;
+  min-height: 90vh;
+  border-radius: 20px;
+  background-color: #078C61;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.SignIn_section .box img,
+.otp_section .box img {
+  width: 350.571px;
+  height: 330px;
+  flex-shrink: 0;
+  display: block;
+  margin: 0 auto;
+}
+.SignIn_section .contact_number,
+.otp_section .contact_number {
+  margin-top: 40%;
+}
+.SignIn_section .contact_number h5,
+.otp_section .contact_number h5 {
+  font-family: "Inter", sans-serif;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 39px;
+  letter-spacing: 0em;
+  text-align: right;
+  color: #767D87;
+}
+.SignIn_section .contact_number ::-moz-placeholder, .otp_section .contact_number ::-moz-placeholder {
+  color: #B5B5B5;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 48px;
+  letter-spacing: 0em;
+  background-color: transparent !important;
+}
+.SignIn_section .contact_number ::placeholder,
+.otp_section .contact_number ::placeholder {
+  color: #B5B5B5;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 48px;
+  letter-spacing: 0em;
+  background-color: transparent !important;
+}
+.SignIn_section .contact_number input,
+.otp_section .contact_number input {
+  font-size: 18px;
+  height: 64px !important;
+  letter-spacing: 1px;
+  padding: 12px;
+  background-color: transparent !important;
+  border: 1.5px solid #E1E1E1 !important;
+}
+.SignIn_section .contact_number .input_number,
+.otp_section .contact_number .input_number {
+  height: 64px !important;
+  background-color: transparent !important;
+  border: 1.5px solid #E1E1E1 !important;
+}
+.SignIn_section .button Button,
+.otp_section .button Button {
+  height: 50px;
+  background: #FBBC04;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 35px;
+  letter-spacing: 0px;
+  text-align: center;
+  width: 100%;
+}
+.SignIn_section .button :hover,
+.otp_section .button :hover {
+  height: 50px;
+  background: #FBBC04 !important;
+  border: none !important;
+}
+
+.otp_section {
+  margin-top: 30%;
+}
+.otp_section .contact_number .otp_resend p {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: 0em;
+  text-align: right;
+  color: #767D87;
+}
+.otp_section .contact_number .otp_resend span {
+  color: green;
+}
+.otp_section h5 {
+  margin-top: 40%;
+}
+.otp_section p {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: 0em;
+  text-align: right;
+  color: #767D87;
+}
+.otp_section span {
+  color: #078C61;
+}
+.otp_section .input_number {
+  height: 64px !important;
+  background-color: transparent !important;
+  border: 1.5px solid #E1E1E1 !important;
+}/*# sourceMappingURL=signIn.css.map */

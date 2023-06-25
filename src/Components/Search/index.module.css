@@ -1,0 +1,16 @@
+.searcBox {
+  position: relative;
+  width: 400px;
+}
+.searcBox input[type=search] {
+  background-image: url(../../Images/searchIcon.svg) !important;
+  background-repeat: no-repeat;
+  background-size: 23px;
+  height: 44px;
+  line-height: 42px;
+  background-color: #F8F7FA;
+  border-color: #F8F7FA;
+  border-radius: 10px !important;
+  padding: 0 20px 0 50px;
+  background-position: 15px center;
+}/*# sourceMappingURL=index.module.css.map */
