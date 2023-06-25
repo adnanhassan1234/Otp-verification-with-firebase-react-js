@@ -31,7 +31,7 @@ const Home = () => {
           search: searchValue, // Add the search parameter
         },
       });
-      setCardContent(response.data);
+      setUserData(response.data);
       setIsLoader(true);
     } catch (error) {
       // Handle any errors that occurred during the request
@@ -203,7 +203,7 @@ const Home = () => {
         />
       </section> :
       <Box>
-        <Typography variant="h4">Loading...</Typography>
+        <Typography variant="h5">Loading...</Typography>
       </Box>
       }
      
