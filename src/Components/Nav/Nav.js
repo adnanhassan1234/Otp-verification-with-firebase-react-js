@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Button, Dropdown } from "react-bootstrap";
 import "./nav.scss";
@@ -20,7 +20,6 @@ const navMenu = [
 ];
 
 const Nav = () => {
-
   const navigate = useNavigate();
   const [activeLink, setActiveLink] = useState("/home");
 
@@ -31,7 +30,18 @@ const Nav = () => {
   const logout = () => {
     navigate("/");
     localStorage.removeItem("token");
-  }
+  };
+
+  useEffect(() => {
+    // Check if the token exists in localStorage
+    const token = localStorage.getItem("token");
+
+    // If token is not present or expired
+    if (!token) {
+      // Redirect the user to the login page
+      navigate("/");
+    }
+  }, []);
 
   return (
     <nav>

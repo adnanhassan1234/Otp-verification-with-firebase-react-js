@@ -1,8 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./home.scss";
 import Header from "Components/Header";
-
-// import home from "../../Images/home/icon.png";
 
 const Home = () => {
   return (

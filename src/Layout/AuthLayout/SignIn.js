@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { useDispatch } from "react-redux";
 import { Form, Button } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
-import Select from "react-select";
 import "./splash.scss";
 import "./otp.scss";
 import login from "../../Images/navbar/login.png";
@@ -13,11 +11,9 @@ import { RecaptchaVerifier, signInWithPhoneNumber } from "firebase/auth";
 import { toast, Toaster } from "react-hot-toast";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
-import OtpInput from "otp-input-react";
-import { BsFillShieldLockFill, BsTelephoneFill } from "react-icons/bs";
+
 
 const SignIn = ({ children }) => {
-  
   const navigate = useNavigate();
   const [otp, setOtp] = useState("");
   const [ph, setPh] = useState("");
@@ -122,7 +118,7 @@ const SignIn = ({ children }) => {
         setUser(res.user);
         setLoading(false);
         // Save the token in localStorage
-         localStorage.setItem("token", res.user.accessToken);
+        localStorage.setItem("token", res.user.accessToken);
         toast.success("OTP verification successful!");
       })
       .catch((err) => {
