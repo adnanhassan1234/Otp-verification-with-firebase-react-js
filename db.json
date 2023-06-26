@@ -2,17 +2,10 @@
   "users": [
     {
       "id": 3,
-      "name": "Ahmed Howell",
-      "email": "hassan123@melissa.com",
-      "department": "Web Designer",
-      "phone": "+1 (127) 2123 212"
-    },
-    {
-      "id": 3,
       "name": "Ali Howell",
       "email": "hassan@melissa.com",
-      "phone": "+1 (127) 2123 212",
-      "department": "Finance"
+      "department": "Finance",
+      "phone": "+1 (127) 2123 212"
     },
     {
       "id": 5,
@@ -43,13 +36,6 @@
       "department": "Finance"
     },
     {
-      "id": 10,
-      "name": "Ahmed Howell",
-      "email": "hassan123@melissa.com",
-      "phone": "+1 (127) 2123 212",
-      "department": "Management"
-    },
-    {
       "id": 12,
       "name": "Ervin Howell",
       "email": "Shanna@melissa.com",
@@ -57,25 +43,11 @@
       "phone": "+1 (127) 2123 212"
     },
     {
-      "id": 13,
-      "name": "Hassan Howell",
-      "email": "hassan@melissa.com",
-      "phone": "+1 (127) 2123 212",
-      "department": "Finance"
-    },
-    {
       "id": 14,
       "name": "Ahmed Howell",
       "email": "hassan123@melissa.com",
       "phone": "+1 (127) 2123 212",
       "department": "Management"
-    },
-    {
-      "id": 15,
-      "name": "Ali Howell",
-      "email": "hassan@melissa.com",
-      "phone": "+1 (127) 2123 212",
-      "department": "Finance"
     },
     {
       "id": 16,

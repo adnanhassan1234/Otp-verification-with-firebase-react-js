@@ -62,9 +62,9 @@ color: #1A1A1A;
 
       &.active,
       &:hover {
-        background: #EFF1F4;
+        background: #F3F3F3;
         border-radius: 4px;
-        border: 1px solid #EFF1F4;
+        border: 1px solid #F3F3F3;
         font-family: 'Rubik';
         font-style: normal;
       }
@@ -77,7 +77,7 @@ color: #1A1A1A;
       }
 
       .notification {
-        background: #7ea858;
+        background: #078C61;
         border-radius: 20px;
         width: 25px;
         height: 25px;
@@ -185,15 +185,15 @@ color: #1A1A1A;
     width: 35px;
     height: 35px;
     border-radius: 50%;
-    background: linear-gradient(225deg, #FA4A6F 0%, #EF5395 30.91%, #DE4DCB 75.85%, #CE4CE6 100%), #DB50E0;
-    box-shadow: 0px 20px 15px rgba(0, 0, 0, 0.1);
+    background: #31D7EC !important;
+    // box-shadow: 0px 20px 15px rgba(0, 0, 0, 0.1);
     color: #fff;
     border: none;
     margin-left: 230px;
     margin-top: 50px;
     font-family: 'Rubik';
     font-style: normal;
-
+    background: #31D7EC !important;
     i {
       margin: 10px 12px;
     }
@@ -201,7 +201,7 @@ color: #1A1A1A;
 }
 
 input {
-  background-color: #EFF1F4 !important;
+  background-color: #F3F3F3 !important;
   font-family: 'Rubik';
   font-style: normal;
 }

@@ -52,7 +52,7 @@
   margin: 0 0 18px;
 }
 .mesgs .outgoing .text {
-  background: #e4e4e4 !important;
+  background: #F3F3F3 !important;
   color: #888888 !important;
 }
 .mesgs .outgoing,
@@ -172,8 +172,8 @@
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  background: linear-gradient(225deg, #FA4A6F 0%, #EF5395 30.91%, #DE4DCB 75.85%, #CE4CE6 100%), #DB50E0;
+  background: #31D7EC;
   box-shadow: 0px 20px 15px rgba(0, 0, 0, 0.1);
-  background-color: rgb(142, 178, 111);
+  background-color: #31D7EC;
   color: #fff;
 }/*# sourceMappingURL=index.module.css.map */

@@ -1,21 +1,24 @@
 .icon_menu {
     display: flex;
-  
+
     img {
         margin-left: 14px;
         cursor: pointer;
     }
 }
-.iconImg{
-   
+
+.iconImg {
+
     display: flex;
     flex-direction: row-reverse;
-    img{
+
+    img {
         margin-top: -4px;
-    
+
     }
- 
+
 }
+
 .tableHeader {
     background-color: white !important;
 
@@ -73,10 +76,12 @@ input {
     background: #FFF;
     box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.03);
 }
+
 .btn.btn-primary {
     background-color: #078C61 !important;
 }
-.icon_menus:first-child{
-    font-size:15px;
+
+.icon_menus:first-child {
+    font-size: 15px;
     color: #767D87;
 }

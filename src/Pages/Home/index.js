@@ -10,24 +10,21 @@ import view from "../../Images/navbar/Show.png";
 import user from "../../Images/home/Group 48095894.png";
 import axios from "axios";
 import Typography from "@mui/material/Typography";
-import {
-  Box,
-  Dialog,
-  DialogActions,
-  DialogContent,
-  DialogContentText,
-  DialogTitle,
-} from "@mui/material";
 import { useSnackbar } from "notistack";
 import AddUpdateNewUser from "Components/Adduser/AddUpdateNewUser";
 import phones from "../../Images/home/Call.png";
 import emails from "../../Images/home/Message.png";
 import profiles from "../../Images/home/Group 48095894.png";
+import DeletePopup from "./DeletePopup";
+import ViewUser from "Components/Adduser/ViewUser";
+import { Box } from "@mui/material";
 
 const Home = () => {
   const [userData, setUserData] = useState([]);
   const [selectedEditData, setSelectedEditData] = useState({});
+  const [selectedViewData, setSelectedViewData] = useState({});
   const [openEditModal, setOpenEditModal] = useState(false);
+  const [openViewModal, setOpenViewModal] = useState(false);
   const [isLoader, setIsLoader] = useState(false);
   const [searchValue, setSearchValue] = useState("");
   const [open, setOpen] = useState(false); // popup
@@ -91,6 +88,12 @@ const Home = () => {
     setOpenEditModal(true);
   };
 
+  // View popup model open
+  const handleOpenViewModal = (user) => {
+    setSelectedViewData(user);
+    setOpenViewModal(true);
+  };
+
   // id base user delete
   const handleOpenDeleteModal = (id) => {
     setDeleteUserId(id);
@@ -129,7 +132,15 @@ const Home = () => {
               })
             }
           />
-          <img src={view} title="View" width="100%" alt="" />
+          <img src={view} title="View" width="100%" alt=""    onClick={() =>
+              handleOpenViewModal({
+                id: row.id,
+                name: row.name,
+                email: row.email,
+                department: row.department,
+                phone: row.phone,
+              })
+            } />
         </div>
       ),
     },
@@ -233,34 +244,13 @@ const Home = () => {
           </Card>
 
           {/* Delete confirmation popup */}
-          <Dialog
+          <DeletePopup
             open={openDeleteModal}
             onClose={handleCloseDeleteModal}
-            aria-labelledby="alert-dialog-title"
-            aria-describedby="alert-dialog-description"
-          >
-            <DialogTitle id="alert-dialog-title">Delete User</DialogTitle>
-            <DialogContent>
-              <DialogContentText id="alert-dialog-description">
-                Are you sure you want to delete this user?
-              </DialogContentText>
-            </DialogContent>
-            <DialogActions>
-              <Button onClick={handleCloseDeleteModal} color="primary">
-                Cancel
-              </Button>
-              <Button
-                onClick={() => {
-                  deleteUser(deleteUserId);
-                  handleCloseDeleteModal();
-                }}
-                color="primary"
-                autoFocus
-              >
-                Delete
-              </Button>
-            </DialogActions>
-          </Dialog>
+            handleCloseDeleteModal={handleCloseDeleteModal}
+            deleteUser={deleteUser}
+            deleteUserId={deleteUserId}
+          />
         </section>
       ) : (
         <Box>
@@ -282,6 +272,13 @@ const Home = () => {
         open={openEditModal}
         fetchData={fetchData}
         selectedEditData={selectedEditData}
+      />
+
+      {/* View user same popup */}
+      <ViewUser
+        handleClosePopup={() => setOpenViewModal(false)}
+        open={openViewModal}
+        selectedViewData={selectedViewData}
       />
     </>
   );

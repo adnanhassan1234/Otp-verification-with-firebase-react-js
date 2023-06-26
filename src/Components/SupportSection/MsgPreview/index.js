@@ -29,20 +29,10 @@ const MsgPreview = () => {
         </div>
       </div> */}
 
-      <div className={classes.description}>
-          <Form>
-          {['checkbox'].map((type) => (
-            <div key={`default-${type}`} className="mb-3">
-              <Form.Check 
-                type={type}
-                id={`default-${type}`}
-                label= <div className='mt-1' >Mark as complete &nbsp; &nbsp;
+      <div className="d-flex align-items-center">
+         
+        <input type="checkbox" name="" id="" />&nbsp; &nbsp; Mark as complete &nbsp; &nbsp;
                 <i className="fa fa-ellipsis-v " aria-hidden="true"></i>
-                </div>
-              />
-            </div>
-          ))}
-        </Form>
         </div>
     </div>
     <div className={classes.mesgs}>
@@ -307,13 +297,15 @@ const MsgPreview = () => {
             <i className="fal fa-image"></i>
           </button>
         </div>
-        <input
-          type="text"
-          className={classes.form_control}
-          placeholder="Type a message" />
         <button className={`${classes.btn} ${classes.btnSend}`} type="button">
           <i className="fas fa-paper-plane"></i>
         </button>
+        <input
+          type="text"
+          width="100%"
+          className={classes.form_control}
+          placeholder="Type a message" />
+       
       </div>
     </div>
   </div>
