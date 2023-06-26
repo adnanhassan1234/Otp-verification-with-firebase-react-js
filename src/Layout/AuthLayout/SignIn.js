@@ -89,7 +89,7 @@ const SignIn = ({ children }) => {
         console.log("confirmationResult:", confirmationResult);
         setLoading(false);
         setShowOTP(true);
-        setTimer(30); // Reset the timer when OTP is sent
+        setTimer(59); // Reset the timer when OTP is sent
         toast.success("OTP sent successfully!");
       })
       .catch((error) => {
