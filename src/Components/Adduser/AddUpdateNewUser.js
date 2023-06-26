@@ -54,7 +54,7 @@ const AddUpdateNewUser = ({
           variant: "success",
           anchorOrigin: {
             vertical: "bottom",
-            horizontal: "right",
+            horizontal: "left",
           },
         });
       } else {
@@ -64,7 +64,7 @@ const AddUpdateNewUser = ({
           variant: "success",
           anchorOrigin: {
             vertical: "bottom",
-            horizontal: "right",
+            horizontal: "left",
           },
         });
       }
@@ -79,7 +79,7 @@ const AddUpdateNewUser = ({
         variant: "error",
         anchorOrigin: {
           vertical: "bottom",
-          horizontal: "right",
+          horizontal: "left",
         },
       });
       console.error(error);
@@ -167,6 +167,8 @@ const AddUpdateNewUser = ({
                       Android Developer
                     </MenuItem>
                     <MenuItem value="iOS Developer">iOS Developer</MenuItem>
+                    <MenuItem value="Management">Management</MenuItem>
+                    <MenuItem value="Finance">Finance</MenuItem>
                   </Select>
                 </FormControl>
               </Grid>

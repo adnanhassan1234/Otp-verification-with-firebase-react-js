@@ -1,12 +1,21 @@
 .icon_menu {
     display: flex;
-
+  
     img {
         margin-left: 14px;
         cursor: pointer;
     }
 }
-
+.iconImg{
+   
+    display: flex;
+    flex-direction: row-reverse;
+    img{
+        margin-top: -4px;
+    
+    }
+ 
+}
 .tableHeader {
     background-color: white !important;
 
@@ -63,4 +72,11 @@ input {
     border-radius: 15px !important;
     background: #FFF;
     box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.03);
+}
+.btn.btn-primary {
+    background-color: #078C61 !important;
+}
+.icon_menus:first-child{
+    font-size:15px;
+    color: #767D87;
 }

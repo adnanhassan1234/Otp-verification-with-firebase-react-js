@@ -10,9 +10,19 @@ import view from "../../Images/navbar/Show.png";
 import user from "../../Images/home/Group 48095894.png";
 import axios from "axios";
 import Typography from "@mui/material/Typography";
-import { Box } from "@mui/material";
+import {
+  Box,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogContentText,
+  DialogTitle,
+} from "@mui/material";
 import { useSnackbar } from "notistack";
 import AddUpdateNewUser from "Components/Adduser/AddUpdateNewUser";
+import phones from "../../Images/home/Call.png";
+import emails from "../../Images/home/Message.png";
+import profiles from "../../Images/home/Group 48095894.png";
 
 const Home = () => {
   const [userData, setUserData] = useState([]);
@@ -21,6 +31,8 @@ const Home = () => {
   const [isLoader, setIsLoader] = useState(false);
   const [searchValue, setSearchValue] = useState("");
   const [open, setOpen] = useState(false); // popup
+  const [openDeleteModal, setOpenDeleteModal] = useState(false);
+  const [deleteUserId, setDeleteUserId] = useState(null);
   const { enqueueSnackbar } = useSnackbar();
 
   // fetch data
@@ -52,7 +64,7 @@ const Home = () => {
         variant: "success",
         anchorOrigin: {
           vertical: "bottom",
-          horizontal: "right",
+          horizontal: "left",
         },
       });
     } catch (error) {
@@ -62,7 +74,7 @@ const Home = () => {
         variant: "error",
         anchorOrigin: {
           vertical: "bottom",
-          horizontal: "right",
+          horizontal: "left",
         },
       });
     }
@@ -73,9 +85,21 @@ const Home = () => {
     setOpen(false);
   };
 
+  // edit popup model open
   const handleOpenEditModal = (user) => {
     setSelectedEditData(user);
     setOpenEditModal(true);
+  };
+
+  // id base user delete
+  const handleOpenDeleteModal = (id) => {
+    setDeleteUserId(id);
+    setOpenDeleteModal(true);
+  };
+
+  // popup close
+  const handleCloseDeleteModal = () => {
+    setOpenDeleteModal(false);
   };
 
   const columns = [
@@ -87,14 +111,14 @@ const Home = () => {
             src={delet}
             width="100%"
             alt=""
-            onClick={() => {
-              deleteUser(row.id);
-            }}
+            title="Delete"
+            onClick={() => handleOpenDeleteModal(row.id)}
           />
           <img
             src={edit}
             width="100%"
             alt=""
+            title="Edit"
             onClick={() =>
               handleOpenEditModal({
                 id: row.id,
@@ -105,7 +129,7 @@ const Home = () => {
               })
             }
           />
-          <img src={view} width="100%" alt="" />
+          <img src={view} title="View" width="100%" alt="" />
         </div>
       ),
     },
@@ -114,47 +138,63 @@ const Home = () => {
       sortable: true,
       selector: (row) => row.department,
     },
-
     {
       name: "Phone",
       sortable: true,
       selector: (row) => row.phone,
+      cell: (row) => (
+        <div className="iconImg">
+          &nbsp;
+          <img src={phones} alt="" />
+          &nbsp; {row.phone}
+        </div>
+      ),
     },
-
     {
       name: "Email",
       sortable: true,
       selector: (row) => row.email,
+      cell: (row) => (
+        <div className="iconImg">
+          &nbsp;
+          <img src={emails} height={28} alt="" /> {row.email}
+        </div>
+      ),
     },
-
     {
       name: "User",
       sortable: true,
       selector: (row) => row.name,
-      // selector: (row) => row.action,
       cell: (row) => (
-        <div className="icon_menus">
-          {row.name} <br />
-          {row.email}
+        <div
+          className="icon_menus d-flex"
+          style={{ color: "##767D87 !important" }}
+        >
+          <div>
+            <b>{row.name} </b>
+            {row.email}
+          </div>
+          <img
+            src={profiles}
+            className="profile"
+            height={36}
+            alt=""
+            style={{ marginLeft: "8px !important" }}
+          />
         </div>
       ),
     },
   ];
 
-
-  
-  const filteredData = userData.filter(
-    (row) => {
-      const fullName = row.name.toLowerCase().replace(/\s+/g, "");
-      const search = searchValue.toLowerCase().replace(/\s+/g, "");
-      return (
-        fullName.includes(search) ||
-        fullName.startsWith(search) ||
-        row.email.toLowerCase().includes(search)
-      );
-    }
-  );
-  
+  const filteredData = userData.filter((row) => {
+    const fullName = row.name.toLowerCase().replace(/\s+/g, "");
+    const search = searchValue.toLowerCase().replace(/\s+/g, "");
+    return (
+      fullName.includes(search) ||
+      fullName.startsWith(search) ||
+      row.email.toLowerCase().includes(search)
+    );
+  });
 
   return (
     <>
@@ -192,27 +232,57 @@ const Home = () => {
             />
           </Card>
 
-          {/* add user popup */}
-          <AddUpdateNewUser
-            fetchData={fetchData}
-            open={open}
-            handleClosePopup={handleClosePopup}
-            onHide={() => setOpen(false)}
-          />
-
-          {/* Edit user same popup */}
-          <AddUpdateNewUser
-            handleClosePopup={() => setOpenEditModal(false)}
-            open={openEditModal}
-            fetchData={fetchData}
-            selectedEditData={selectedEditData}
-          />
+          {/* Delete confirmation popup */}
+          <Dialog
+            open={openDeleteModal}
+            onClose={handleCloseDeleteModal}
+            aria-labelledby="alert-dialog-title"
+            aria-describedby="alert-dialog-description"
+          >
+            <DialogTitle id="alert-dialog-title">Delete User</DialogTitle>
+            <DialogContent>
+              <DialogContentText id="alert-dialog-description">
+                Are you sure you want to delete this user?
+              </DialogContentText>
+            </DialogContent>
+            <DialogActions>
+              <Button onClick={handleCloseDeleteModal} color="primary">
+                Cancel
+              </Button>
+              <Button
+                onClick={() => {
+                  deleteUser(deleteUserId);
+                  handleCloseDeleteModal();
+                }}
+                color="primary"
+                autoFocus
+              >
+                Delete
+              </Button>
+            </DialogActions>
+          </Dialog>
         </section>
       ) : (
         <Box>
           <Typography variant="h5">Loading...</Typography>
         </Box>
       )}
+
+      {/* add user popup */}
+      <AddUpdateNewUser
+        fetchData={fetchData}
+        open={open}
+        handleClosePopup={handleClosePopup}
+        onHide={() => setOpen(false)}
+      />
+
+      {/* Edit user same popup */}
+      <AddUpdateNewUser
+        handleClosePopup={() => setOpenEditModal(false)}
+        open={openEditModal}
+        fetchData={fetchData}
+        selectedEditData={selectedEditData}
+      />
     </>
   );
 };

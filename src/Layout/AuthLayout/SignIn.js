@@ -20,7 +20,7 @@ const SignIn = ({ children }) => {
   const [loading, setLoading] = useState(false);
   const [showOTP, setShowOTP] = useState(false);
   const [user, setUser] = useState(null);
-  const [timer, setTimer] = useState(30);
+  const [timer, setTimer] = useState(59);
 
   useEffect(() => {
     let countdownTimer;
@@ -119,7 +119,10 @@ const SignIn = ({ children }) => {
         setLoading(false);
         // Save the token in localStorage
         localStorage.setItem("token", res.user.accessToken);
-        toast.success("OTP verification successful!");
+        setTimeout(() => {
+          toast.success("OTP verification successful!");
+          navigate("/home");
+        }, 1000);
       })
       .catch((err) => {
         console.log(err);
@@ -164,7 +167,7 @@ const SignIn = ({ children }) => {
                   <h5>We just texted you!</h5>
                   <p>
                     Please enter the code we just sent you at <br />
-                    <span>{ph}</span>
+                    <span>+{ph}</span>
                   </p>
                   <div className="common mt-5 ms-1">
                     <ReactInputVerificationCode
